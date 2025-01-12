@@ -1,0 +1,10 @@
+{
+    "name": "yh9pl/todo-app-project",
+    "description": "A todo app project",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}

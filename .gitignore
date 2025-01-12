@@ -1,0 +1,53 @@
+# Logs y archivos temporales
+*.log
+*.cache
+*.tmp
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de configuración del entorno
+.env
+.env.local
+.env.*.local
+
+# Dependencias de Composer
+/vendor/
+
+# Archivos generados
+/public/storage
+/public/uploads
+/public/temp
+
+# Archivos de sesiones y caché de PHP
+sessions/
+cache/
+*.bak
+*.swp
+
+# Archivos relacionados con IDEs
+.idea/
+*.sublime-*
+.vscode/
+*.code-workspace
+
+# Archivos relacionados con PHPUnit
+.phpunit.result.cache
+
+# Archivos de control de versiones del sistema
+*.lock
+*.orig
+
+# Otras exclusiones recomendadas
+/tests/output/
+node_modules/
+coverage/
+build/
+dist/
+
+# Archivos de configuración específicos del usuario
+*.local.php
+*.local.yml
+*.local.json
