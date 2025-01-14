@@ -25,6 +25,14 @@ que corresponda con la ruta solicitada.
 Conocido como el chambeador 💪, es quien se encarga de ejecutar lógica del lado del servidor con
 base en la petición que el usuario realizó en el frontend (una operación CRUD, una petición de un recurso, etc.)
 
+Lógica del Controlador:
+
+    - Crear el estado del fronted (Datos a renderizar)
+
+    - Ejecutar lógica GET o POST
+
+    - Renderizar el frontend
+
 🔽
 
 4.- Modelos, Renderizar Vistas y lógica de Helpers

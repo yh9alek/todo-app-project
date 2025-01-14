@@ -7,10 +7,13 @@ use app\Router;
 
 class LoginController {
     public static function signIn() {
-        # Estado del login
+        # Definir el Estado del login
         $user = null;
         $errors = [];
 
+        # Ejecutar Lógica GET o POST
+
+        # Renderizar la vista
         View::render('sign-in', [
             'user'   => $user,
             'errors' => $errors,
