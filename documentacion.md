@@ -35,3 +35,15 @@ Los Modelos representan las Entidades o Tablas de la base de datos (Ejem. Produc
 propiedades son los campos de las mismas. Los Modelos ejecutan consultas CRUD a la bd.
 
 Las Vistas se renderizan al final, despues de haber hecho la ejecución de lógica del backend.
+
+------------------------------------------------------------------------
+
+HELPERS (Clases de utilidad para realizar acciones específicas)
+
+1.- Asset
+
+Clase para importar dinámicamente un recurso estático dependiendo el módulo (css, js, etc.)
+
+2.- View
+
+Clase para manejar la lógica de renderizado de vistas
