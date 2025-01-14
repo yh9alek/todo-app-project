@@ -2,9 +2,16 @@
 
 namespace app;
 
+use app\controllers\LoginController;
+
 class Router {
     public array $getRoutes = [];
     public array $postRoutes = [];
+
+    public function __construct() {
+        $this->get('/sign-in', [LoginController::class, 'signIn']);
+        $this->get('/sign-up', [LoginController::class, 'signUp']);
+    }
 
     public function get($url, $fn) {
         $this->getRoutes[$url] = $fn;
@@ -14,7 +21,7 @@ class Router {
         $this->postRoutes[$url] = $fn;
     }
 
-    public function resolve() {
+    public function resolve(): void {
         $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
 
