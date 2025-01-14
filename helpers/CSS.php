@@ -3,7 +3,12 @@
 namespace app\helpers;
 
 class CSS {
-    private array $CSSPaths = [
-        
+    private static array $CSSPaths = [
+        '/sign-in' => '/assets/css/sign-in.css',
+        '/sign-up' => '/assets/css/sign-up.css',
     ];
+
+    public static function get(string $path): string {
+        return self::$CSSPaths[$path];
+    }
 }
