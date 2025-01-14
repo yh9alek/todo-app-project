@@ -1,4 +1,4 @@
-<?php use app\helpers\CSS; ?>
+<?php use app\helpers\Asset; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +10,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="<?= CSS::get($_SERVER['REQUEST_URI']) ?>">
+        <link rel="stylesheet" href="/assets/css/_index-layout.css">
+        <link rel="stylesheet" href="<?= Asset::get($_SERVER['REQUEST_URI'], 'css') ?>">
     </head>
     <body>
         <p>Login layout</p>
         <main>
-            <?= $module ?>
+            <?= $module ?> # El módulo se renderiza aquí
         </main>
+        <script src="<?= Asset::get($_SERVER['REQUEST_URI'], 'js') ?>"></script>
     </body>
 </html>
