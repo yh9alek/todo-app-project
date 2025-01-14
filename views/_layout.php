@@ -1,3 +1,5 @@
+<?php use app\helpers\Asset; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,11 +10,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/_layout.css">
+        <link rel="stylesheet" href="<?= Asset::get($_SERVER['REQUEST_URI'], 'css') ?>">
     </head>
     <body>
         <p>Layout</p>
         <main>
-            <?= $module ?>
+            <?= $module ?> # El módulo se renderiza aquí
         </main>
+        <link rel="stylesheet" href="<?= Asset::get($_SERVER['REQUEST_URI'], 'js') ?>">
     </body>
 </html>
