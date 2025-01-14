@@ -16,7 +16,7 @@
     <body>
         <p>Login layout</p>
         <main>
-            <?= $module ?> # El módulo se renderiza aquí
+            <?= $module ?> # El módulo en memoria se renderiza aquí
         </main>
         <script src="<?= Asset::get($_SERVER['REQUEST_URI'], 'js') ?>"></script>
     </body>

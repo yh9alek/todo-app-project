@@ -27,7 +27,7 @@ base en la petición que el usuario realizó en el frontend (una operación CRUD
 
 🔽
 
-4.- Modelos y Renderizar Vistas
+4.- Modelos, Renderizar Vistas y lógica de Helpers
 
 Dentro de la lógica de un controlador estan estas entidades.
 
@@ -38,12 +38,39 @@ Las Vistas se renderizan al final, despues de haber hecho la ejecución de lógi
 
 ------------------------------------------------------------------------
 
+
 HELPERS (Clases de utilidad para realizar acciones específicas)
 
 1.- Asset
 
-Clase para importar dinámicamente un recurso estático dependiendo el módulo (css, js, etc.)
+Clase para importar dinámicamente recursos estáticos dependiendo del módulo renderizado (css, js, etc.)
+Los assets tienen el mismo nombre de los módulos para así, asegurar su importación dinámica.
 
 2.- View
 
 Clase para manejar la lógica de renderizado de vistas
+
+------------------------------------------------------------------------
+
+Manejo de plantillas o templates para reutilizar un mismo HTML.
+
+Los archivos que inician con '_' al inicio del nombre son HTML que se va a reutilizar en muchos
+casos (HEADER, FOOTER, Importación de estilos, cdns, dependencias y esas cosas) Es toda la estructura
+en general de un HTML para varios módulos (Ejem. _layout.php)
+
+Los archivos que no inician con el caracter antes mencionado y que se encuentran dentro de la carpeta
+modules, son eso, módulos y estos son los que van adentro del contenido de un templeate (Ejem. modulo.php)
+De este modo, al renderizar vistas estaremos viendo el mismo template y solo cambiando su contenido.
+
+La clase o helper View es quien hace el trabajo de tomar el template correspondiente y el módulo a
+renderizar. Recibe datos de los modelos y crea variables de uso para representar el estado de la vista.
+
+Ejemplos:
+
+    $productos => [...productos] 
+    Son los productos que se obtuvieron de la db, renderizamos esta información en el frontend.
+    
+    $errores   => [...errores_obtenidos]
+    Errores que querramos renderizar a modo de mensajes o algo similar.
+
+En fín, View renderiza contenido y estado obtenido por el backend 👍

@@ -16,7 +16,7 @@
     <body>
         <p>Layout</p>
         <main>
-            <?= $module ?> # El módulo se renderiza aquí
+            <?= $module ?> # El módulo en memoria se renderiza aquí
         </main>
         <link rel="stylesheet" href="<?= Asset::get($_SERVER['REQUEST_URI'], 'js') ?>">
     </body>
